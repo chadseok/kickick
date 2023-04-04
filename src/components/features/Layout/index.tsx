@@ -4,11 +4,11 @@ import Footer from './Footer';
 import Header from './Header';
 
 type Props = {
-  noLayout: boolean;
+  withLayout?: boolean;
 };
 
-const Layout = ({ noLayout, children }: PropsWithChildren<Props>) => {
-  if (noLayout) return <main>{children}</main>;
+const Layout = ({ withLayout, children }: PropsWithChildren<Props>) => {
+  if (!withLayout) return <main>{children}</main>;
 
   return (
     <div>
